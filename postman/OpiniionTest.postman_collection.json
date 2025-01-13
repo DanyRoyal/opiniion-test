@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "b83b89ea-aa3b-4f58-bfb0-54b9a515dfd3",
+		"name": "OpiniionTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8388474"
+	},
+	"item": [
+		{
+			"name": "locations",
+			"item": [
+				{
+					"name": "Get All Locations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/locations",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"locations"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Locations",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/locations",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"locations"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "544"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"220-YcnB3H7SbQnx9bmzRsPmNWH/lbE\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Jan 2025 18:15:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 5,\n    \"locations\": [\n        {\n            \"_id\": \"678555cfc78c1beb79978a93\",\n            \"name\": \"East Jacques Branch\",\n            \"createdDate\": \"2023-01-08T04:56:50.946Z\"\n        },\n        {\n            \"_id\": \"678555cfc78c1beb79978a8d\",\n            \"name\": \"Eberttown Branch\",\n            \"createdDate\": \"2023-08-16T04:14:41.264Z\"\n        },\n        {\n            \"_id\": \"678555cfc78c1beb79978a91\",\n            \"name\": \"Frederick Branch\",\n            \"createdDate\": \"2023-11-24T22:45:17.153Z\"\n        },\n        {\n            \"_id\": \"678555cfc78c1beb79978a95\",\n            \"name\": \"Leuschkeport Branch\",\n            \"createdDate\": \"2023-11-15T07:12:53.841Z\"\n        },\n        {\n            \"_id\": \"678555cfc78c1beb79978a8f\",\n            \"name\": \"Wehnercester Branch\",\n            \"createdDate\": \"2023-10-05T05:44:44.689Z\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "OpiniionTest",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"locationId\": \"678555cfc78c1beb79978a93\",\n    \"startDate\": \"2024-01-01\",\n    \"endDate\": \"2024-01-31\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/opiniionTest",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"opiniionTest"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "OpiniionTest",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"locationId\": \"678555cfc78c1beb79978a93\",\n    \"startDate\": \"2024-01-01\",\n    \"endDate\": \"2024-01-31\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/opiniionTest",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"opiniionTest"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "5854"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"16de-o03viBpDTL7g9gWBC4WGa4RXHy0\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 13 Jan 2025 18:16:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"locationId\": \"678555cfc78c1beb79978a93\",\n    \"locationName\": \"East Jacques Branch\",\n    \"dateRange\": {\n        \"start\": \"2024-01-01\",\n        \"end\": \"2024-01-31\"\n    },\n    \"totalCustomers\": 5,\n    \"totalLogs\": 25,\n    \"customers\": [\n        {\n            \"customerId\": \"678555cfc78c1beb79978ab5\",\n            \"firstName\": \"Simone\",\n            \"lastName\": \"Doyle\",\n            \"email\": \"antonette_labadie32@gmail.com\",\n            \"phone\": \"997.471.4961 x55609\",\n            \"logs\": [\n                {\n                    \"_id\": \"678555cfc78c1beb79978b1c\",\n                    \"customerId\": \"678555cfc78c1beb79978ab5\",\n                    \"type\": \"SUPPORT\",\n                    \"text\": \"Cras cunctatio commodo admoveo coma asperiores et succurro sumptus.\",\n                    \"date\": \"2024-01-24T21:14:40.682Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"678555cfc78c1beb79978b1d\",\n                    \"customerId\": \"678555cfc78c1beb79978ab5\",\n                    \"type\": \"SUPPORT\",\n                    \"text\": \"Solvo tum verbum termes voco nostrum.\",\n                    \"date\": \"2024-01-26T02:49:20.527Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"678555cfc78c1beb79978b1e\",\n                    \"customerId\": \"678555cfc78c1beb79978ab5\",\n                    \"type\": \"FEEDBACK\",\n                    \"text\": \"Aegrus adulatio vivo consequatur thorax damno utor porro.\",\n                    \"date\": \"2024-01-04T15:00:21.301Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"678555cfc78c1beb79978b1f\",\n                    \"customerId\": \"678555cfc78c1beb79978ab5\",\n                    \"type\": \"PURCHASE\",\n                    \"text\": \"Video decens vilitas verto studio defessus.\",\n                    \"date\": \"2024-01-24T11:02:54.299Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"678555cfc78c1beb79978b20\",\n                    \"customerId\": \"678555cfc78c1beb79978ab5\",\n                    \"type\": \"COMPLAINT\",\n                    \"text\": \"Defetiscor amoveo creator quam tondeo antiquus.\",\n                    \"date\": \"2024-01-07T04:37:30.957Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"678555cfc78c1beb79978b21\",\n                    \"customerId\": \"678555cfc78c1beb79978ab5\",\n                    \"type\": \"SUPPORT\",\n                    \"text\": \"Confugo cruciamentum exercitationem iste confido bellum tantum.\",\n                    \"date\": \"2024-01-30T08:04:07.859Z\",\n                    \"__v\": 0\n                }\n            ]\n        },\n        {\n            \"customerId\": \"678555cfc78c1beb79978ab7\",\n            \"firstName\": \"Orrin\",\n            \"lastName\": \"Douglas\",\n            \"email\": \"dean_legros@hotmail.com\",\n            \"phone\": \"709-387-6564 x3282\",\n            \"logs\": [\n                {\n                    \"_id\": \"678555cfc78c1beb79978b23\",\n                    \"customerId\": \"678555cfc78c1beb79978ab7\",\n                    \"type\": \"FEEDBACK\",\n                    \"text\": \"Blandior cruciamentum complectus umerus.\",\n                    \"date\": \"2024-01-23T22:35:39.783Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"678555cfc78c1beb79978b24\",\n                    \"customerId\": \"678555cfc78c1beb79978ab7\",\n                    \"type\": \"FEEDBACK\",\n                    \"text\": \"Corrupti depraedor caterva.\",\n                    \"date\": \"2024-01-01T07:37:12.955Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"678555cfc78c1beb79978b25\",\n                    \"customerId\": \"678555cfc78c1beb79978ab7\",\n                    \"type\": \"PURCHASE\",\n                    \"text\": \"Decipio credo solum demonstro doloremque.\",\n                    \"date\": \"2024-01-27T13:04:39.270Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"678555cfc78c1beb79978b26\",\n                    \"customerId\": \"678555cfc78c1beb79978ab7\",\n                    \"type\": \"VISIT\",\n                    \"text\": \"Dedico nam beatus derideo conduco solus vomer careo.\",\n                    \"date\": \"2024-01-13T22:34:04.556Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"678555cfc78c1beb79978b27\",\n                    \"customerId\": \"678555cfc78c1beb79978ab7\",\n                    \"type\": \"VISIT\",\n                    \"text\": \"Deleo antiquus virtus adamo caveo aggero aestus doloremque.\",\n                    \"date\": \"2024-01-07T09:16:04.074Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"678555cfc78c1beb79978b28\",\n                    \"customerId\": \"678555cfc78c1beb79978ab7\",\n                    \"type\": \"VISIT\",\n                    \"text\": \"Totam adicio turba deripio depraedor voluptatem color crur patruus.\",\n                    \"date\": \"2024-01-25T00:52:17.638Z\",\n                    \"__v\": 0\n                }\n            ]\n        },\n        {\n            \"customerId\": \"678555cfc78c1beb79978ab9\",\n            \"firstName\": \"Chesley\",\n            \"lastName\": \"Russel\",\n            \"email\": \"johnson.tillman@yahoo.com\",\n            \"phone\": \"(243) 300-2429 x9118\",\n            \"logs\": [\n                {\n                    \"_id\": \"678555cfc78c1beb79978b2a\",\n                    \"customerId\": \"678555cfc78c1beb79978ab9\",\n                    \"type\": \"SUPPORT\",\n                    \"text\": \"Deputo tolero maiores decens.\",\n                    \"date\": \"2024-01-24T12:06:34.279Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"678555cfc78c1beb79978b2b\",\n                    \"customerId\": \"678555cfc78c1beb79978ab9\",\n                    \"type\": \"RETURN\",\n                    \"text\": \"Conforto suppellex cometes perspiciatis.\",\n                    \"date\": \"2024-01-07T00:32:04.911Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"678555cfc78c1beb79978b2c\",\n                    \"customerId\": \"678555cfc78c1beb79978ab9\",\n                    \"type\": \"SUPPORT\",\n                    \"text\": \"Versus dignissimos vacuus.\",\n                    \"date\": \"2024-01-25T08:22:04.979Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"678555cfc78c1beb79978b2d\",\n                    \"customerId\": \"678555cfc78c1beb79978ab9\",\n                    \"type\": \"INQUIRY\",\n                    \"text\": \"Utpote callide apparatus sustineo bonus desparatus tempore acerbitas claustrum apostolus.\",\n                    \"date\": \"2024-01-25T07:37:22.776Z\",\n                    \"__v\": 0\n                }\n            ]\n        },\n        {\n            \"customerId\": \"678555cfc78c1beb79978abb\",\n            \"firstName\": \"Sofia\",\n            \"lastName\": \"Quigley\",\n            \"email\": \"antwon_moore@yahoo.com\",\n            \"phone\": \"1-274-603-7495 x2593\",\n            \"logs\": [\n                {\n                    \"_id\": \"678555cfc78c1beb79978b2f\",\n                    \"customerId\": \"678555cfc78c1beb79978abb\",\n                    \"type\": \"FEEDBACK\",\n                    \"text\": \"Denuo vicissitudo cilicium.\",\n                    \"date\": \"2024-01-10T00:40:01.060Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"678555cfc78c1beb79978b30\",\n                    \"customerId\": \"678555cfc78c1beb79978abb\",\n                    \"type\": \"INQUIRY\",\n                    \"text\": \"Carbo inflammatio taedium ulciscor vorago copia numquam celo cohors cicuta.\",\n                    \"date\": \"2024-01-27T06:20:35.644Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"678555cfc78c1beb79978b31\",\n                    \"customerId\": \"678555cfc78c1beb79978abb\",\n                    \"type\": \"INQUIRY\",\n                    \"text\": \"Viduo tonsor acies aedificium via voluptatum triumphus tot caelum urbs.\",\n                    \"date\": \"2024-01-19T04:26:24.132Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"678555cfc78c1beb79978b32\",\n                    \"customerId\": \"678555cfc78c1beb79978abb\",\n                    \"type\": \"COMPLAINT\",\n                    \"text\": \"Libero accedo ab arx virtus aggredior desparatus speciosus.\",\n                    \"date\": \"2024-01-12T13:16:43.750Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"678555cfc78c1beb79978b33\",\n                    \"customerId\": \"678555cfc78c1beb79978abb\",\n                    \"type\": \"RETURN\",\n                    \"text\": \"Talis valeo defendo coerceo sapiente suscipio ultio vulgaris celo.\",\n                    \"date\": \"2024-01-08T02:05:29.270Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"678555cfc78c1beb79978b34\",\n                    \"customerId\": \"678555cfc78c1beb79978abb\",\n                    \"type\": \"PURCHASE\",\n                    \"text\": \"Solium possimus amor claudeo voluptatem abundans sodalitas audax quam.\",\n                    \"date\": \"2024-01-17T15:21:15.654Z\",\n                    \"__v\": 0\n                }\n            ]\n        },\n        {\n            \"customerId\": \"678555cfc78c1beb79978abd\",\n            \"firstName\": \"Magnolia\",\n            \"lastName\": \"Senger\",\n            \"email\": \"valerie_zulauf@gmail.com\",\n            \"phone\": \"971-359-8092 x917\",\n            \"logs\": [\n                {\n                    \"_id\": \"678555cfc78c1beb79978b36\",\n                    \"customerId\": \"678555cfc78c1beb79978abd\",\n                    \"type\": \"FEEDBACK\",\n                    \"text\": \"Appello crudelis reprehenderit pel dolorum ceno ulterius.\",\n                    \"date\": \"2024-01-07T08:23:04.544Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"678555cfc78c1beb79978b37\",\n                    \"customerId\": \"678555cfc78c1beb79978abd\",\n                    \"type\": \"COMPLAINT\",\n                    \"text\": \"Cervus careo demoror sortitus.\",\n                    \"date\": \"2024-01-16T04:03:02.797Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"678555cfc78c1beb79978b38\",\n                    \"customerId\": \"678555cfc78c1beb79978abd\",\n                    \"type\": \"COMPLAINT\",\n                    \"text\": \"Tergo tabula molestiae adopto tepesco.\",\n                    \"date\": \"2024-01-25T09:52:31.757Z\",\n                    \"__v\": 0\n                }\n            ]\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
