@@ -78,7 +78,7 @@ PORT=3000
 
 4. Seed the database with sample data
 ```bash
-node scripts/seed.js
+node mock/seed.js
 ```
 
 5. Start the server
