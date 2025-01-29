@@ -6,7 +6,7 @@ const Customer = require('../models/Customer');
 const CustomerLog = require('../models/customerLogs');
 
 mongoose.set('strictQuery', false);
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/customerDB', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/opiniion-test-task', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
